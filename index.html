@@ -6,11 +6,6 @@
     <img src="image.jpg" id="img">
     <pre class="exifData"></pre>
     
-    <!--
-    <img src="image2.jpg" id="img2">
-    <pre class="exifData"></pre>
-    -->
-    
     <script>
       window.onload=getExif;
  
@@ -19,7 +14,7 @@
         EXIF.getData(img, function() {
           var make = EXIF.getTag(this, "Make");
           var model = EXIF.getTag(this, "Model");
-          var exifData = document.getElementdById("exifData");
+          var exifData = document.getElementById("exifData");
           exifData.innerHTML = `${make} ${model}`;
         });
       }
