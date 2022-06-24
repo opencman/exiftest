@@ -19,7 +19,16 @@
           var model = EXIF.getTag(this, "Model");
           var exifData = document.getElementById("exifData1");
           exifData.innerHTML = `${make} ${model}`;
+          
+        var img2 = document.getElementById("img2");
+        EXIF.getData(img, function() {
+          var make = EXIF.getTag(this, "Make");
+          var model = EXIF.getTag(this, "Model");
+          var exifData = document.getElementById("exifData2");
+          exifData.innerHTML = `${make} ${model}`;
+          
         });
+        
       }
     </script>
     
@@ -29,14 +38,7 @@
       <script>
       window.onload=getExif;
  
-      function getExif() {
-        var img2 = document.getElementById("img2");
-        EXIF.getData(img, function() {
-          var make = EXIF.getTag(this, "Make");
-          var model = EXIF.getTag(this, "Model");
-          var exifData = document.getElementById("exifData2");
-          exifData.innerHTML = `${make} ${model}`;
-        });
+
       }
     </script>
   
