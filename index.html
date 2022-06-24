@@ -15,11 +15,11 @@
       window.onload=getExif;
  
       function getExif() {
-        var img = document.getElementsByID("img");
+        var img = document.getElementById("img");
         EXIF.getData(img, function() {
           var make = EXIF.getTag(this, "Make");
           var model = EXIF.getTag(this, "Model");
-          var exifData = document.getElementsByID("exifData");
+          var exifData = document.getElementdById("exifData");
           exifData.innerHTML = `${make} ${model}`;
         });
       }
