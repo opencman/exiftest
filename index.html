@@ -11,11 +11,11 @@
       window.onload=getExif;
  
       function getExif() {
-        var img = document.getElementByClassName("img");
+        var img = document.getElementsByClassName("img");
         EXIF.getData(img, function() {
           var make = EXIF.getTag(this, "Make");
           var model = EXIF.getTag(this, "Model");
-          var exifData = document.getElementByClassName("exifData");
+          var exifData = document.getElementsByClassName("exifData");
           exifData.innerHTML = `${make} ${model}`;
         });
       }
