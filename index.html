@@ -5,9 +5,7 @@
   <body>
     
     <img src="image.jpg" id="img1">
-    <pre id="exifData1"></pre>
-    <img src="image2.jpg" id="img2">
-    <pre id="exifData2"></pre>  
+    <pre id="exifData1"></pre> 
     
     <script>
       window.onload=getExif;
@@ -20,16 +18,6 @@
           var exifData1 = document.getElementById("exifData1");
           exifData1.innerHTML = `${make} ${model}`;
         });
-          
-        var img2 = document.getElementById("img2");
-        EXIF.getData(img2, function() {
-          var make = EXIF.getTag(this, "Make");
-          var model = EXIF.getTag(this, "Model");
-          var exifData2 = document.getElementById("exifData2");
-          exifData2.innerHTML = `${make} ${model}`;
-          
-        });
-        
       }
     </script>
     
