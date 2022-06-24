@@ -15,7 +15,7 @@
       window.onload=getExif;
  
       function getExif() {
-        var img = document.getElementsByClassID("img");
+        var img = document.getElementsByID("img");
         EXIF.getData(img, function() {
           var make = EXIF.getTag(this, "Make");
           var model = EXIF.getTag(this, "Model");
