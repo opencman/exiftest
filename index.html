@@ -3,17 +3,19 @@
     <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
   </head>
   <body>
-    <img src="image.jpg" id="img">
-    <pre id="exifData"></pre>
+    <img src="image.jpg" class="img">
+    <pre class="exifData"></pre>
+    <img src="image2.jpg" class="img">
+    <pre class="exifData"></pre>
     <script>
       window.onload=getExif;
  
       function getExif() {
-        var img = document.getElementById("img");
+        var img = document.getElementByClassName("img");
         EXIF.getData(img, function() {
           var make = EXIF.getTag(this, "Make");
           var model = EXIF.getTag(this, "Model");
-          var exifData = document.getElementById("exifData");
+          var exifData = document.getElementByClassName("exifData");
           exifData.innerHTML = `${make} ${model}`;
         });
       }
