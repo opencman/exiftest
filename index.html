@@ -18,7 +18,7 @@
         EXIF.getData(img1, function() {
           var make = EXIF.getTag(this, "Make");
           var model = EXIF.getTag(this, "Model");
-          var time = EXIF.getTag(this, "Time");
+          var time = EXIF.getTag(this, "DateTimeOriginal");
           var exifData1 = document.getElementById("exifData1");
           exifData1.innerHTML = `${make} ${model} ${time}`;
         });
